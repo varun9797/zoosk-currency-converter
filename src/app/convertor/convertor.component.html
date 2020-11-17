@@ -2,18 +2,25 @@
   <span>{{fromAmount}} {{fromSelectedCurrency}} equals</span><br>
   <h3>{{convertedAmount}} {{toSelectedCurrency}}</h3>
   <span>{{currentDate  | date:'medium'}}</span>
-  <div><br>
-    <input name="currency" [(ngModel)]="fromAmount" />
-    <select [(ngModel)]="fromSelectedCurrency" name="currencies" id="currencies">
-      <option value="USD">USD</option>
-      <option value="EUR">EUR</option>
-      <option value="CAD">CAD</option>
-    </select>
-    <select [(ngModel)]="toSelectedCurrency" name="currencies" id="currencies">
-      <option value="USD">USD</option>
-      <option value="EUR">EUR</option>
-      <option value="CAD">CAD</option>
-    </select>
+  <div class="input">
+    <div>
+      <input name="currency" [(ngModel)]="fromAmount" />
+    </div>
+    <div>
+      <select [(ngModel)]="fromSelectedCurrency" name="currencies" id="currencies">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="CAD">CAD</option>
+      </select>
+    </div>
+    <div>
+      <select [(ngModel)]="toSelectedCurrency" name="currencies" id="currencies">
+        <option value="USD">USD</option>
+        <option value="EUR">EUR</option>
+        <option value="CAD">CAD</option>
+      </select>
+    </div>
+
   </div><br>
-<button (click)="convertCurrency()">Convert</button>
+<button class="btn btn-primary" (click)="convertCurrency()">Convert</button>
 </div>

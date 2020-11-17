@@ -1,7 +1,12 @@
 .convertor{
-    width: 300px;
+    width: 500px;
     border: 1px solid green;
-    padding: 50px;
+    padding: 15px 50px 15px 50px;
     margin: 20px;
     background-color: #f8f8f8;
+}
+
+.input{
+    display: grid;
+    grid-template-columns: auto auto auto;
 }
