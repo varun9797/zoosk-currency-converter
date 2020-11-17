@@ -1,0 +1,14 @@
+<div class="history">
+  <h3 *ngIf="historyArray.length>0">History</h3>
+  <div class="inner-box">
+    <ul *ngFor="let history of this.historyArray.reverse()">
+      <li>{{history.fromAmount}} was {{history.toAmmount}}</li>
+      <li>{{history.date   | date:'medium'}}</li>
+    </ul> 
+    <div *ngIf="historyArray.length==0">
+      <h3>No History</h3>
+    </div>
+  </div>
+  
+</div>
+ 
